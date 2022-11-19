@@ -1,0 +1,50 @@
+INFO:root:Script args:
+{'txt_field': 'body', 'splits': ['test'], 'dataset': 'msg_en'}
+INFO:root:Loading dataset
+WARNING:datasets.builder:Using custom data configuration default-b5b3d374d17854c7
+WARNING:datasets.builder:Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+INFO:root:Loading tokenizer
+INFO:root:DatasetDict({
+    test: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__'],
+        num_rows: 18489
+    })
+    train: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__'],
+        num_rows: 64707
+    })
+    val: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__'],
+        num_rows: 9245
+    })
+})
+INFO:root:Tokenizing dataset on body
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-2de5e1b0cd9f7816.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4e0459c35ea81a41.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-12ead5fb0644f22d.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-fc7f140f6faa9939.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-9fc6ed7d94e1c2cd.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-9415efa04655492e.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-f288d011beb095b9.arrow
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-217032e819e06fc0.arrow
+INFO:root:DatasetDict({
+    test: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__', 'body_length', 'title_length', 'input_ids', 'token_type_ids', 'attention_mask'],
+        num_rows: 18489
+    })
+    train: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__', 'body_length', 'title_length', 'input_ids', 'token_type_ids', 'attention_mask'],
+        num_rows: 64707
+    })
+    val: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__', 'body_length', 'title_length', 'input_ids', 'token_type_ids', 'attention_mask'],
+        num_rows: 9245
+    })
+})
+INFO:root:Longest body in test (words): 6936
+INFO:root:Loading model
+INFO:root:Converting labels
+WARNING:datasets.fingerprint:Parameter 'function'=<function <dictcomp>.<lambda> at 0x14afc9258dc0> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+INFO:root:Predicting on test
+INFO:root:{'eval_loss': 3.4941508769989014, 'eval_accuracy': 0.06479528368218941, 'eval_precision': 0.6807086426621372, 'eval_recall': 0.06479528368218941, 'eval_f1': 0.08640927312759084, 'eval_runtime': 149.3229, 'eval_samples_per_second': 123.819, 'eval_steps_per_second': 0.489}
+INFO:root:COMPLETE
