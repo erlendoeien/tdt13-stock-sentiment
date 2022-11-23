@@ -1,0 +1,101 @@
+2022-11-20 12:07:06,713 | INFO: Script args:
+{'txt_field': 'title', 'splits': ['train', 'val', 'test'], 'dataset': 'msg_all', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 50}
+2022-11-20 12:07:06,713 | INFO: Loading dataset
+2022-11-20 12:07:07,280 | WARNING: Using custom data configuration default-08f7f50fe15052cc
+2022-11-20 12:07:07,298 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-20 12:07:07,360 | INFO: DatasetDict({
+    test: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__'],
+        num_rows: 32159
+    })
+    train: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__'],
+        num_rows: 112553
+    })
+    val: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__'],
+        num_rows: 16080
+    })
+})
+2022-11-20 12:07:07,360 | INFO: Loading tokenizer
+2022-11-20 12:07:12,426 | INFO: Tokenizing dataset on title
+2022-11-20 12:07:12,431 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-ca32701f7892ca5f.arrow
+2022-11-20 12:07:12,436 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-cce0c587e27184fc.arrow
+2022-11-20 12:07:12,445 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-d66a68bf2cdfc557.arrow
+2022-11-20 12:07:12,478 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-bbedb00473daf9c7.arrow
+2022-11-20 12:07:12,514 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-386c10b35154ecfe.arrow
+2022-11-20 12:07:12,564 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-c52c41a690eadf90.arrow
+2022-11-20 12:07:12,573 | INFO: DatasetDict({
+    test: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+        num_rows: 32159
+    })
+    train: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+        num_rows: 112553
+    })
+    val: Dataset({
+        features: ['id', 'title', 'body', 'category', 'issuerId', 'publishedTime', 'title_clean', 'title_lang', 'title_lang_score', 'par_len', 'par_label', 'par_label_score', 'weighted_scores', 'weighted_label', 'weighted_label_conf', 'n_paragraphs', 'symbol', 'name', 'publishedTime_dt', 'close', 'open', 'high', 'low', 'volume', 'is_next_day', 'next_day', 'dol_volume', 'intra_day_high_low_pct', 'intra_day_open_close_pct', 'gap_pct', 'ewm_3', 'ewm_std_3', 'd3_avg_pct', 'is_positive', 'is_negative', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+        num_rows: 16080
+    })
+})
+2022-11-20 12:07:12,875 | INFO: Longest title in train (words): 43
+2022-11-20 12:07:12,875 | INFO: Creating DataPaddingCollator
+2022-11-20 12:07:12,875 | INFO: Loading autoconfig
+2022-11-20 12:07:13,373 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-20 12:07:13,373 | INFO: Loading model
+2022-11-20 12:07:16,180 | INFO: Dividing and OHE labels
+2022-11-20 12:07:16,188 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-f342a7ce222b4c5c.arrow
+2022-11-20 12:07:16,361 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4796fc25b596f980.arrow
+2022-11-20 12:07:17,078 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-eae639e5ecc321c9.arrow
+2022-11-20 12:07:21,786 | INFO: Setup Trainer
+2022-11-20 12:07:23,947 | INFO: STARTING TRAI2022-2022-11-20 15:06:10,078 | INFO: Eval results on best model
+2022-11-20 15:06:20,381 | INFO: {'eval_loss': 0.9483463764190674, 'eval_accuracy': 0.7430348258706467, 'eval_precision': 0.6870082792853696, 'eval_recall': 0.7430348258706467, 'eval_f1': 0.7047992320845292, 'eval_runtime': 10.2948, 'eval_samples_per_second': 1561.951, 'eval_steps_per_second': 6.12, 'epoch': 50.0}
+2022-11-20 15:06:20,381 | INFO: Predicting on test
+2022-11-20 15:06:40,863 | INFO: PredictionOutput(predictions=array([[ 2.0997226, -5.6775837,  3.0539777],
+       [ 2.3422842, -6.0324826,  3.159372 ],
+       [ 0.7102591, -3.134263 ,  2.0371883],
+       ...,
+       [ 2.2675285, -6.5518665,  3.7947543],
+       [-1.3588518, -4.675885 ,  5.9814963],
+       [ 1.57439  , -3.0093894,  0.911052 ]], dtype=float32), label_ids=array([2, 2, 2, ..., 0, 2, 2]), metrics={'test_loss': 0.9665752649307251, 'test_accuracy': 0.737989365340962, 'test_precision': 0.680307547575822, 'test_recall': 0.737989365340962, 'test_f1': 0.6978998584484297, 'test_runtime': 20.4783, 'test_samples_per_second': 1570.397, 'test_steps_per_second': 6.153})
+2022-11-20 15:06:40,864 | INFO: All results from best model:
+m best model:

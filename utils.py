@@ -1,5 +1,11 @@
 import logging 
 import numpy as np
+from datasets import load_dataset
+
+    
+id2label = {0: "positive", 1: "neutral", 2: "negative"}    
+label2id = {v:k for k,v in id2label.items()}
+
 
 def setup_logging(log_file, **kwargs):
     base_kwargs = {"format":'%(asctime)s | %(levelname)s: %(message)s',
@@ -22,3 +28,12 @@ def compute_metrics(eval_pred, _metrics):
         else:
             results[name] = metric.compute(predictions=predictions, references=labels, average="weighted")[name]
     return results
+
+def _load_ds(ds_path):
+    """Loads parqet dataset files, already split"""
+    return load_dataset("parquet", 
+                     data_dir=ds_path,
+                     data_files={"test": "test.parquet",
+                                 "train": "train.parquet", 
+                                "val": "val.parquet"}
+                     )  

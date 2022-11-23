@@ -1,0 +1,72 @@
+2022-11-21 09:57:00,547 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['train', 'val', 'test'], 'dataset': 'msg_en', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 50, 'batch_size': 64, 'resume_from_checkpoint': True}
+2022-11-21 09:57:00,548 | INFO: Loading dataset
+2022-11-21 09:57:01,090 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-21 09:57:01,168 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-21 09:57:02,265 | INFO: Loading tokenizer
+2022-11-21 09:57:07,555 | INFO: Tokenizing dataset on body
+2022-11-21 09:57:07,557 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-2de5e1b0cd9f7816.arrow
+2022-11-21 09:57:07,570 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4e0459c35ea81a41.arrow
+2022-11-21 09:57:07,593 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-12ead5fb0644f22d.arrow
+2022-11-21 09:57:07,642 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-6fba961281cd041a.arrow
+2022-11-21 09:57:07,942 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-b1f3ad8676373d30.arrow
+2022-11-21 09:57:09,207 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-e91fa780b5df3e07.arrow
+2022-11-21 09:57:10,328 | INFO: Longest body in train (words): 14424
+2022-11-21 09:57:10,328 | INFO: Creating DataPaddingCollator
+2022-11-21 09:57:10,328 | INFO: Loading autoconfig
+2022-11-21 09:57:10,818 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-21 09:57:10,818 | INFO: Loading model
+2022-11-21 09:57:14,370 | INFO: Dividing and OHE labels
+2022-11-21 09:57:33,166 | INFO: Post process features
+2022-11-21 09:57:33,168 | INFO: {'labels': Value(dtype='int64', id=None), 'input_ids': Sequence(feature=Value(dtype='int32', id=None), length=-1, id=None), 'attention_mask': Sequence(feature=Value(dtype='int8', id=None), length=-1, id=None)}
+2022-11-21 09:57:37,879 | INFO: Setup Trainer
+2022-11-21 09:57:41,605 | INFO: Loading local model and resuming training
+2022-11-21 15:52:13,761 | INFO: Eval results on best model
+2022-11-21 15:53:19,091 | INFO: {'eval_loss': 0.6028498411178589, 'eval_accuracy': 0.7795565170362359, 'eval_precision': 0.6150334684244906, 'eval_recall': 0.7795565170362359, 'eval_f1': 0.6834800567861985, 'eval_runtime': 65.2948, 'eval_samples_per_second': 141.589, 'eval_steps_per_second': 4.426, 'epoch': 50.0}
+2022-11-21 15:53:19,091 | INFO: Predicting on test
+2022-11-21 15:55:29,791 | INFO: PredictionOutput(predictions=array([[-0.2352938 , -1.5393994 ,  1.0041314 ],
+       [-0.2352961 , -1.5393937 ,  1.0041276 ],
+       [-0.23530528, -1.5393713 ,  1.0041133 ],
+       ...,
+       [-0.23529597, -1.5393939 ,  1.004128  ],
+       [-0.23529872, -1.5393872 ,  1.0041237 ],
+       [-0.23529318, -1.5394008 ,  1.0041324 ]], dtype=float32), label_ids=array([2, 2, 2, ..., 2, 0, 2]), metrics={'test_loss': 0.6038767695426941, 'test_accuracy': 0.7799772837903618, 'test_precision': 0.6172757947132328, 'test_recall': 0.7799772837903618, 'test_f1': 0.6842895271265509, 'test_runtime': 130.6989, 'test_samples_per_second': 141.462, 'test_steps_per_second': 4.422})
+2022-11-21 15:55:29,794 | INFO: COMPLETE

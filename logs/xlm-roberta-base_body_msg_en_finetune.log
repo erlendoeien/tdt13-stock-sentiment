@@ -1,0 +1,14 @@
+2022-11-21 15:28:41,181 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['test'], 'dataset': 'msg_en', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 1, 'batch_size': 256, 'resume_from_checkpoint': False, 'lm_dataset': 'lm_msg_all_body_512_drop_last_xlm_roberta_base_512'}
+2022-11-21 15:28:41,181 | INFO: Loading tokenizer
+2022-11-21 15:28:46,652 | INFO: Loading dataset
+2022-11-21 15:28:47,330 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-21 15:28:47,350 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-21 15:28:47,367 | INFO: Cleaning and tokenizing on body
+2022-11-21 15:28:47,369 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-83fee9977f49f8bb.arrow
+2022-11-21 15:28:47,374 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-57b6b7bd0319eaad.arrow
+2022-11-21 15:28:47,379 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-95c0bbfa0a0976f3.arrow
+2022-11-21 15:28:47,419 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-0849aff49b83e777.arrow
+2022-11-21 15:29:22,062 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-0154bed60f80bfd4.arrow
+2022-11-21 15:29:22,066 | INFO: Creating tokenized LM dataset with CHUNK_SIZE=512
+2022-11-21 15:33:50,386 | INFO: Storing LM dataset to lm_msg_all_body_512_drop_last_xlm_roberta_base_512

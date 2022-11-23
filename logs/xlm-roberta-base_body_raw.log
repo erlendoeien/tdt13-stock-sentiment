@@ -1,0 +1,61 @@
+2022-11-20 14:12:06,924 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['train', 'val', 'test'], 'dataset': 'msg_en', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 50, 'batch_size': 64}
+2022-11-20 14:12:06,924 | INFO: Loading dataset
+2022-11-20 14:12:07,462 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-20 14:12:07,476 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-20 14:12:07,486 | INFO: Loading tokenizer
+2022-11-20 14:12:12,253 | INFO: Tokenizing dataset on body
+2022-11-20 14:12:12,255 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-2de5e1b0cd9f7816.arrow
+2022-11-20 14:12:12,258 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4e0459c35ea81a41.arrow
+2022-11-20 14:12:12,261 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-12ead5fb0644f22d.arrow
+2022-11-20 14:12:12,283 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-6fba961281cd041a.arrow
+2022-11-20 14:12:12,305 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-b1f3ad8676373d30.arrow
+2022-11-20 14:12:12,327 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-e91fa780b5df3e07.arrow
+2022-11-20 14:12:13,076 | INFO: Longest body in train (words): 14424
+2022-11-20 14:12:13,076 | INFO: Creating DataPaddingCollator
+2022-11-20 14:12:13,076 | INFO: Loading autoconfig
+2022-11-20 14:12:13,561 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-20 14:12:13,561 | INFO: Loading model
+2022-11-20 14:12:15,566 | INFO: Dividing and OHE labels
+2022-11-20 14:12:33,855 | INFO: Post process features
+2022-11-20 14:12:33,856 | INFO: {'labels': Value(dtype='int64', id=None), 'input_ids': Sequence(feature=Value(dtype='int32', id=None), length=-1, id=None), 'attention_mask': Sequence(feature=Value(dtype='int8', id=None), length=-1, id=None)}
+2022-11-20 14:12:38,232 | INFO: Setup Trainer
+2022-11-20 14:12:39,562 | INFO: STARTING TRAINING

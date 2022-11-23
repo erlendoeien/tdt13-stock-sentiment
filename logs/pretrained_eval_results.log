@@ -1,0 +1,249 @@
+2022-11-22 20:27:33,978 | INFO: Eval of xlm-roberta-base
+2022-11-22 20:27:39,017 | INFO: Current model variation:
+2022-11-22 20:27:39,018 | INFO: xlm-roberta-base - body - msg_all
+2022-11-22 20:27:39,018 | INFO: Loading existing dataset: msg_all
+2022-11-22 20:27:39,054 | INFO: Creating DataPaddingCollator
+2022-11-22 20:27:39,054 | INFO: Loading autoconfig
+2022-11-22 20:27:39,544 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-22 20:27:39,544 | INFO: Loading model
+2022-11-22 20:27:47,293 | INFO: Setup training args
+2022-11-22 20:27:50,539 | INFO: Predicting
+2022-11-22 20:29:24,319 | INFO: Prediction results:
+2022-11-22 20:29:24,320 | INFO: {'test_loss': 1.0785874128341675, 'test_accuracy': 0.20488821169812493, 'test_precision': 0.041979179292855655, 'test_recall': 0.20488821169812493, 'test_f1': 0.06968145075250053, 'test_runtime': 93.7776, 'test_samples_per_second': 342.929, 'test_steps_per_second': 2.687}
+2022-11-22 20:29:24,489 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:29:24,564 | INFO: ###############
+2022-11-22 20:29:24,564 | INFO: Current model variation:
+2022-11-22 20:29:24,564 | INFO: xlm-roberta-base - body - msg_en
+2022-11-22 20:29:24,564 | INFO: Preparing dataset from msg_en
+2022-11-22 20:29:24,564 | INFO: 	>> Loading new dataset
+2022-11-22 20:29:25,143 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-22 20:29:25,182 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-22 20:29:25,215 | INFO: 	>> Tokenizing dataset on body
+2022-11-22 20:29:25,216 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-2de5e1b0cd9f7816.arrow
+2022-11-22 20:29:25,221 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4e0459c35ea81a41.arrow
+2022-11-22 20:29:25,227 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-12ead5fb0644f22d.arrow
+2022-11-22 20:29:25,270 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-6fba961281cd041a.arrow
+2022-11-22 20:29:25,304 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-b1f3ad8676373d30.arrow
+2022-11-22 20:29:25,351 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-e91fa780b5df3e07.arrow
+2022-11-22 20:29:25,713 | INFO: 	>> Longest body in test (tokens): 6936
+2022-11-22 20:29:25,713 | INFO: 	>> Removing columns and OHE labels
+2022-11-22 20:30:17,012 | INFO: 	>> Store dataset to data/xlm-roberta-base_en_body
+2022-11-22 20:30:17,248 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:30:17,327 | INFO: Creating DataPaddingCollator
+2022-11-22 20:30:17,327 | INFO: Loading autoconfig
+2022-11-22 20:30:17,817 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-22 20:30:17,817 | INFO: Loading model
+2022-11-22 20:30:24,650 | INFO: Setup training args
+2022-11-22 20:30:24,923 | INFO: Predicting
+2022-11-22 20:31:17,783 | INFO: Prediction results:
+2022-11-22 20:31:17,784 | INFO: {'test_loss': 1.382848858833313, 'test_accuracy': 0.013575639569473741, 'test_precision': 0.0001842979897202612, 'test_recall': 0.013575639569473741, 'test_f1': 0.00036365907491333076, 'test_runtime': 52.8578, 'test_samples_per_second': 349.788, 'test_steps_per_second': 2.743}
+2022-11-22 20:31:17,787 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:31:17,902 | INFO: ###############
+2022-11-22 20:31:17,902 | INFO: Current model variation:
+2022-11-22 20:31:17,902 | INFO: xlm-roberta-base - title - msg_all
+2022-11-22 20:31:17,902 | INFO: Preparing dataset from msg_all
+2022-11-22 20:31:17,902 | INFO: 	>> Loading new dataset
+2022-11-22 20:31:18,427 | WARNING: Using custom data configuration default-08f7f50fe15052cc
+2022-11-22 20:31:18,433 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-22 20:31:18,477 | INFO: 	>> Tokenizing dataset on title
+2022-11-22 20:31:18,479 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-ca32701f7892ca5f.arrow
+2022-11-22 20:31:18,484 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-cce0c587e27184fc.arrow
+2022-11-22 20:31:18,490 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-d66a68bf2cdfc557.arrow
+2022-11-22 20:31:18,525 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-bbedb00473daf9c7.arrow
+2022-11-22 20:31:18,763 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-386c10b35154ecfe.arrow
+2022-11-22 20:31:19,333 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-08f7f50fe15052cc/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-c52c41a690eadf90.arrow
+2022-11-22 20:31:19,515 | INFO: 	>> Longest title in test (tokens): 39
+2022-11-22 20:31:19,515 | INFO: 	>> Removing columns and OHE labels
+2022-11-22 20:32:07,098 | INFO: 	>> Store dataset to data/xlm-roberta-base_all_title
+2022-11-22 20:32:07,155 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:32:07,274 | INFO: Creating DataPaddingCollator
+2022-11-22 20:32:07,274 | INFO: Loading autoconfig
+2022-11-22 20:32:07,766 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-22 20:32:07,766 | INFO: Loading model
+2022-11-22 20:32:14,452 | INFO: Setup training args
+2022-11-22 20:32:14,725 | INFO: Predicting
+2022-11-22 20:32:28,222 | INFO: Prediction results:
+2022-11-22 20:32:28,222 | INFO: {'test_loss': 1.3762810230255127, 'test_accuracy': 0.024627631456201997, 'test_precision': 0.00060652023114251, 'test_recall': 0.024627631456201997, 'test_f1': 0.0011838841985561581, 'test_runtime': 13.4946, 'test_samples_per_second': 2383.105, 'test_steps_per_second': 4.669}
+2022-11-22 20:32:28,228 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:32:28,411 | INFO: ###############
+2022-11-22 20:32:28,411 | INFO: Current model variation:
+2022-11-22 20:32:28,411 | INFO: xlm-roberta-base - title - msg_en
+2022-11-22 20:32:28,411 | INFO: Preparing dataset from msg_en
+2022-11-22 20:32:28,411 | INFO: 	>> Loading new dataset
+2022-11-22 20:32:28,954 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-22 20:32:28,960 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-22 20:32:28,972 | INFO: 	>> Tokenizing dataset on title
+2022-11-22 20:32:28,973 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-2de5e1b0cd9f7816.arrow
+2022-11-22 20:32:28,977 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4e0459c35ea81a41.arrow
+2022-11-22 20:32:28,980 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-12ead5fb0644f22d.arrow
+2022-11-22 20:32:29,013 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-31e69babd8a85a5f.arrow
+2022-11-22 20:32:29,217 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4ebc7f564e815902.arrow
+2022-11-22 20:32:29,565 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-06b8f25259150fd7.arrow
+2022-11-22 20:32:29,785 | INFO: 	>> Longest title in test (tokens): 41
+2022-11-22 20:32:29,785 | INFO: 	>> Removing columns and OHE labels
+2022-11-22 20:32:57,395 | INFO: 	>> Store dataset to data/xlm-roberta-base_en_title
+2022-11-22 20:32:57,441 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:32:57,625 | INFO: Creating DataPaddingCollator
+2022-11-22 20:32:57,625 | INFO: Loading autoconfig
+2022-11-22 20:32:58,155 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-22 20:32:58,155 | INFO: Loading model
+2022-11-22 20:33:04,811 | INFO: Setup training args
+2022-11-22 20:33:05,083 | INFO: Predicting
+2022-11-22 20:33:12,998 | INFO: Prediction results:
+2022-11-22 20:33:12,999 | INFO: {'test_loss': 1.3848308324813843, 'test_accuracy': 0.013575639569473741, 'test_precision': 0.0001842979897202612, 'test_recall': 0.013575639569473741, 'test_f1': 0.00036365907491333076, 'test_runtime': 7.9131, 'test_samples_per_second': 2336.498, 'test_steps_per_second': 4.676}
+2022-11-22 20:33:13,003 | INFO: Saving outfile pretrained_eval_results.json
+2022-11-22 20:33:13,228 | INFO: ###############
+2022-11-22 20:33:13,228 | INFO: Clearing GPU cache
+2022-11-22 20:33:13,242 | INFO: Complete

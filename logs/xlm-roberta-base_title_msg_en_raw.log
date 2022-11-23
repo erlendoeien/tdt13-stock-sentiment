@@ -1,0 +1,7 @@
+2022-11-21 15:18:14,012 | INFO: Script args:
+{'txt_field': 'title', 'splits': ['test'], 'dataset': 'msg_en', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 1, 'batch_size': 256, 'resume_from_checkpoint': False, 'lm_dataset': 'lm_msg_all_body_512_drop_last_xlm_roberta_base_512'}
+2022-11-21 15:18:14,013 | INFO: Loading tokenizer
+2022-11-21 15:18:19,195 | INFO: Loading dataset
+2022-11-21 15:18:19,707 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-21 15:18:19,728 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-21 15:18:19,761 | INFO: Cleaning and tokenizing on title
