@@ -1,0 +1,192 @@
+we are running from this directory: /cluster/home/erlenoi/tdt13_nlp
+ the name of the job is: classic_methods
+Th job ID is 14877938
+The job was run on these nodes: idun-07-09
+Number of nodes: 1
+We are using 20 cores
+We are using 20 cores per node
+Total of 1 cores
+Fitting 5 folds for each of 12 candidates, totalling 60 fits
+[CV 2/5] END degree=2, kernel=poly; accuracy: (test=0.137) f1_weighted: (test=0.209) precision_weighted: (test=0.664) recall_weighted: (test=0.137) total time= 1.4min
+[CV 2/5] END degree=4, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 1/5] END degree=4, kernel=rbf; accuracy: (test=0.156) f1_weighted: (test=0.237) precision_weighted: (test=0.676) recall_weighted: (test=0.156) total time= 2.3min
+[CV 4/5] END alpha=0.5, norm=False; accuracy: (test=0.767) f1_weighted: (test=0.687) precision_weighted: (test=0.665) recall_weighted: (test=0.767) total time=   0.0s
+[CV 4/5] END alpha=1.5, norm=False; accuracy: (test=0.770) f1_weighted: (test=0.686) precision_weighted: (test=0.664) recall_weighted: (test=0.770) total time=   0.0s
+[CV 4/5] END degree=3, kernel=linear; accuracy: (test=0.374) f1_weighted: (test=0.462) precision_weighted: (test=0.660) recall_weighted: (test=0.374) total time= 7.6min
+[CV 3/5] END degree=3, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.516) precision_weighted: (test=0.668) recall_weighted: (test=0.438) total time=10.6min
+[CV 5/5] END degree=5, kernel=linear; accuracy: (test=0.381) f1_weighted: (test=0.467) precision_weighted: (test=0.665) recall_weighted: (test=0.381) total time= 6.8min
+[CV 5/5] END degree=3, kernel=linear; accuracy: (test=0.725) f1_weighted: (test=0.683) precision_weighted: (test=0.661) recall_weighted: (test=0.725) total time= 1.2min
+[CV 4/5] END degree=3, kernel=poly; accuracy: (test=0.731) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.731) total time= 1.5min
+[CV 5/5] END degree=5, kernel=linear; accuracy: (test=0.725) f1_weighted: (test=0.683) precision_weighted: (test=0.661) recall_weighted: (test=0.725) total time= 1.2min
+[CV 1/5] END alpha=0.5, norm=True; accuracy: (test=0.776) f1_weighted: (test=0.687) precision_weighted: (test=0.678) recall_weighted: (test=0.776) total time=   0.0s
+[CV 3/5] END alpha=1.5, norm=True; accuracy: (test=0.778) f1_weighted: (test=0.685) precision_weighted: (test=0.673) recall_weighted: (test=0.778) total time=   0.0s
+[CV 3/5] END degree=2, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.516) precision_weighted: (test=0.668) recall_weighted: (test=0.438) total time=10.7min
+[CV 5/5] END degree=4, kernel=poly; accuracy: (test=0.464) f1_weighted: (test=0.540) precision_weighted: (test=0.663) recall_weighted: (test=0.464) total time=14.4min
+[CV 1/5] END degree=2, kernel=rbf; accuracy: (test=0.156) f1_weighted: (test=0.237) precision_weighted: (test=0.676) recall_weighted: (test=0.156) total time= 2.5min
+[CV 5/5] END degree=4, kernel=poly; accuracy: (test=0.141) f1_weighted: (test=0.215) precision_weighted: (test=0.668) recall_weighted: (test=0.141) total time= 1.5min
+[CV 4/5] END alpha=0.5, norm=True; accuracy: (test=0.774) f1_weighted: (test=0.686) precision_weighted: (test=0.665) recall_weighted: (test=0.774) total time=   0.0s
+[CV 4/5] END alpha=1.5, norm=True; accuracy: (test=0.777) f1_weighted: (test=0.683) precision_weighted: (test=0.635) recall_weighted: (test=0.777) total time=   0.0s
+[CV 4/5] END degree=2, kernel=rbf; accuracy: (test=0.431) f1_weighted: (test=0.511) precision_weighted: (test=0.665) recall_weighted: (test=0.431) total time=10.4min
+[CV 4/5] END degree=4, kernel=poly; accuracy: (test=0.476) f1_weighted: (test=0.549) precision_weighted: (test=0.667) recall_weighted: (test=0.476) total time=15.6min
+[CV 3/5] END degree=2, kernel=poly; accuracy: (test=0.141) f1_weighted: (test=0.215) precision_weighted: (test=0.669) recall_weighted: (test=0.141) total time= 1.4min
+[CV 3/5] END degree=4, kernel=linear; accuracy: (test=0.716) f1_weighted: (test=0.679) precision_weighted: (test=0.660) recall_weighted: (test=0.716) total time= 1.2min
+[CV 3/5] END degree=5, kernel=linear; accuracy: (test=0.716) f1_weighted: (test=0.679) precision_weighted: (test=0.660) recall_weighted: (test=0.716) total time= 1.2min
+[CV 5/5] END degree=5, kernel=rbf; accuracy: (test=0.147) f1_weighted: (test=0.223) precision_weighted: (test=0.667) recall_weighted: (test=0.147) total time= 2.1min
+[CV 3/5] END alpha=1, norm=False; accuracy: (test=0.771) f1_weighted: (test=0.690) precision_weighted: (test=0.679) recall_weighted: (test=0.771) total time=   0.0s
+[CV 3/5] END degree=2, kernel=poly; accuracy: (test=0.440) f1_weighted: (test=0.518) precision_weighted: (test=0.667) recall_weighted: (test=0.440) total time= 9.7min
+[CV 2/5] END degree=4, kernel=linear; accuracy: (test=0.385) f1_weighted: (test=0.475) precision_weighted: (test=0.663) recall_weighted: (test=0.385) total time= 7.3min
+[CV 2/5] END degree=4, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.517) precision_weighted: (test=0.669) recall_weighted: (test=0.438) total time= 9.1min
+[CV 2/5] END degree=2, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 2/5] END degree=3, kernel=poly; accuracy: (test=0.136) f1_weighted: (test=0.208) precision_weighted: (test=0.667) recall_weighted: (test=0.136) total time= 1.5min
+[CV 4/5] END degree=5, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.683) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 4/5] END degree=5, kernel=rbf; accuracy: (test=0.732) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.732) total time= 2.1min
+[CV 5/5] END alpha=1, norm=False; accuracy: (test=0.770) f1_weighted: (test=0.689) precision_weighted: (test=0.673) recall_weighted: (test=0.770) total time=   0.0s
+[CV 5/5] END degree=2, kernel=poly; accuracy: (test=0.420) f1_weighted: (test=0.501) precision_weighted: (test=0.662) recall_weighted: (test=0.420) total time= 9.5min
+[CV 1/5] END degree=4, kernel=linear; accuracy: (test=0.399) f1_weighted: (test=0.485) precision_weighted: (test=0.664) recall_weighted: (test=0.399) total time= 7.4min
+[CV 1/5] END degree=4, kernel=rbf; accuracy: (test=0.461) f1_weighted: (test=0.533) precision_weighted: (test=0.666) recall_weighted: (test=0.461) total time= 9.4min
+[CV 4/5] END degree=2, kernel=poly; accuracy: (test=0.730) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.730) total time= 1.4min
+[CV 4/5] END degree=4, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.683) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 1/5] END degree=5, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.661) recall_weighted: (test=0.727) total time= 1.2min
+[CV 1/5] END degree=5, kernel=rbf; accuracy: (test=0.156) f1_weighted: (test=0.237) precision_weighted: (test=0.676) recall_weighted: (test=0.156) total time= 2.1min
+[CV 1/5] END alpha=1, norm=False; accuracy: (test=0.770) f1_weighted: (test=0.687) precision_weighted: (test=0.670) recall_weighted: (test=0.770) total time=   0.0s
+[CV 1/5] END degree=2, kernel=poly; accuracy: (test=0.464) f1_weighted: (test=0.537) precision_weighted: (test=0.665) recall_weighted: (test=0.464) total time=10.4min
+[CV 3/5] END degree=4, kernel=poly; accuracy: (test=0.491) f1_weighted: (test=0.560) precision_weighted: (test=0.668) recall_weighted: (test=0.491) total time=16.3min
+[CV 4/5] END degree=2, kernel=rbf; accuracy: (test=0.732) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.732) total time= 2.5min
+[CV 4/5] END degree=4, kernel=poly; accuracy: (test=0.731) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.731) total time= 1.6min
+[CV 5/5] END alpha=0.5, norm=True; accuracy: (test=0.775) f1_weighted: (test=0.688) precision_weighted: (test=0.678) recall_weighted: (test=0.775) total time=   0.0s
+[CV 5/5] END alpha=1.5, norm=True; accuracy: (test=0.777) f1_weighted: (test=0.685) precision_weighted: (test=0.661) recall_weighted: (test=0.777) total time=   0.0s
+[CV 5/5] END degree=2, kernel=rbf; accuracy: (test=0.421) f1_weighted: (test=0.502) precision_weighted: (test=0.665) recall_weighted: (test=0.421) total time=10.4min
+[CV 2/5] END degree=4, kernel=poly; accuracy: (test=0.491) f1_weighted: (test=0.559) precision_weighted: (test=0.663) recall_weighted: (test=0.491) total time=16.5min
+[CV 5/5] END degree=2, kernel=poly; accuracy: (test=0.142) f1_weighted: (test=0.215) precision_weighted: (test=0.667) recall_weighted: (test=0.142) total time= 1.4min
+[CV 5/5] END degree=4, kernel=linear; accuracy: (test=0.725) f1_weighted: (test=0.683) precision_weighted: (test=0.661) recall_weighted: (test=0.725) total time= 1.2min
+[CV 2/5] END degree=5, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 2/5] END degree=5, kernel=rbf; accuracy: (test=0.142) f1_weighted: (test=0.217) precision_weighted: (test=0.667) recall_weighted: (test=0.142) total time= 2.1min
+[CV 2/5] END alpha=1, norm=False; accuracy: (test=0.767) f1_weighted: (test=0.687) precision_weighted: (test=0.669) recall_weighted: (test=0.767) total time=   0.0s
+[CV 2/5] END degree=2, kernel=poly; accuracy: (test=0.476) f1_weighted: (test=0.547) precision_weighted: (test=0.666) recall_weighted: (test=0.476) total time=10.1min
+[CV 4/5] END degree=4, kernel=linear; accuracy: (test=0.374) f1_weighted: (test=0.462) precision_weighted: (test=0.660) recall_weighted: (test=0.374) total time= 7.4min
+[CV 5/5] END degree=4, kernel=rbf; accuracy: (test=0.421) f1_weighted: (test=0.502) precision_weighted: (test=0.665) recall_weighted: (test=0.421) total time= 9.5min
+[CV 4/5] END degree=3, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.683) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 1/5] END degree=3, kernel=rbf; accuracy: (test=0.156) f1_weighted: (test=0.237) precision_weighted: (test=0.676) recall_weighted: (test=0.156) total time= 2.5min
+[CV 3/5] END degree=5, kernel=poly; accuracy: (test=0.138) f1_weighted: (test=0.210) precision_weighted: (test=0.669) recall_weighted: (test=0.138) total time= 1.4min
+[CV 3/5] END alpha=1, norm=True; accuracy: (test=0.778) f1_weighted: (test=0.685) precision_weighted: (test=0.673) recall_weighted: (test=0.778) total time=   0.0s
+[CV 3/5] END degree=2, kernel=linear; accuracy: (test=0.420) f1_weighted: (test=0.503) precision_weighted: (test=0.657) recall_weighted: (test=0.420) total time= 7.6min
+[CV 2/5] END degree=3, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.517) precision_weighted: (test=0.669) recall_weighted: (test=0.438) total time= 9.7min
+[CV 4/5] END degree=4, kernel=rbf; accuracy: (test=0.431) f1_weighted: (test=0.511) precision_weighted: (test=0.665) recall_weighted: (test=0.431) total time= 9.7min
+[CV 3/5] END degree=2, kernel=rbf; accuracy: (test=0.144) f1_weighted: (test=0.220) precision_weighted: (test=0.668) recall_weighted: (test=0.144) total time= 2.5min
+[CV 3/5] END degree=4, kernel=poly; accuracy: (test=0.140) f1_weighted: (test=0.213) precision_weighted: (test=0.669) recall_weighted: (test=0.140) total time= 1.6min
+[CV 3/5] END alpha=0.5, norm=True; accuracy: (test=0.776) f1_weighted: (test=0.688) precision_weighted: (test=0.685) recall_weighted: (test=0.776) total time=   0.0s
+[CV 2/5] END alpha=1.5, norm=True; accuracy: (test=0.776) f1_weighted: (test=0.683) precision_weighted: (test=0.654) recall_weighted: (test=0.776) total time=   0.0s
+[CV 2/5] END degree=2, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.517) precision_weighted: (test=0.669) recall_weighted: (test=0.438) total time= 9.9min
+[CV 3/5] END degree=4, kernel=linear; accuracy: (test=0.420) f1_weighted: (test=0.503) precision_weighted: (test=0.657) recall_weighted: (test=0.420) total time= 7.4min
+[CV 3/5] END degree=4, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.516) precision_weighted: (test=0.668) recall_weighted: (test=0.438) total time= 9.8min
+[CV 3/5] END degree=2, kernel=linear; accuracy: (test=0.716) f1_weighted: (test=0.679) precision_weighted: (test=0.660) recall_weighted: (test=0.716) total time= 1.2min
+[CV 4/5] END degree=3, kernel=rbf; accuracy: (test=0.732) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.732) total time= 2.5min
+[CV 5/5] END degree=5, kernel=poly; accuracy: (test=0.139) f1_weighted: (test=0.212) precision_weighted: (test=0.667) recall_weighted: (test=0.139) total time= 1.4min
+[CV 1/5] END alpha=1.5, norm=True; accuracy: (test=0.777) f1_weighted: (test=0.684) precision_weighted: (test=0.654) recall_weighted: (test=0.777) total time=   0.0s
+[CV 1/5] END degree=2, kernel=rbf; accuracy: (test=0.461) f1_weighted: (test=0.533) precision_weighted: (test=0.666) recall_weighted: (test=0.461) total time=10.1min
+[CV 5/5] END degree=4, kernel=linear; accuracy: (test=0.381) f1_weighted: (test=0.467) precision_weighted: (test=0.665) recall_weighted: (test=0.381) total time= 7.4min
+[CV 1/5] END degree=5, kernel=linear; accuracy: (test=0.399) f1_weighted: (test=0.485) precision_weighted: (test=0.664) recall_weighted: (test=0.399) total time= 6.9min
+[CV 2/5] END degree=5, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.517) precision_weighted: (test=0.669) recall_weighted: (test=0.438) total time= 8.2min
+[CV 1/5] END degree=2, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.661) recall_weighted: (test=0.727) total time= 1.2min
+[CV 3/5] END degree=3, kernel=poly; accuracy: (test=0.140) f1_weighted: (test=0.214) precision_weighted: (test=0.668) recall_weighted: (test=0.140) total time= 1.4min
+[CV 2/5] END degree=4, kernel=rbf; accuracy: (test=0.142) f1_weighted: (test=0.217) precision_weighted: (test=0.667) recall_weighted: (test=0.142) total time= 2.3min
+[CV 1/5] END alpha=0.5, norm=False; accuracy: (test=0.768) f1_weighted: (test=0.688) precision_weighted: (test=0.669) recall_weighted: (test=0.768) total time=   0.0s
+[CV 1/5] END alpha=1.5, norm=False; accuracy: (test=0.771) f1_weighted: (test=0.687) precision_weighted: (test=0.672) recall_weighted: (test=0.771) total time=   0.0s
+[CV 1/5] END degree=3, kernel=linear; accuracy: (test=0.399) f1_weighted: (test=0.485) precision_weighted: (test=0.664) recall_weighted: (test=0.399) total time= 7.6min
+[CV 1/5] END degree=3, kernel=rbf; accuracy: (test=0.461) f1_weighted: (test=0.533) precision_weighted: (test=0.666) recall_weighted: (test=0.461) total time=10.0min
+[CV 2/5] END degree=5, kernel=linear; accuracy: (test=0.385) f1_weighted: (test=0.475) precision_weighted: (test=0.663) recall_weighted: (test=0.385) total time= 6.8min
+[CV 1/5] END degree=5, kernel=rbf; accuracy: (test=0.461) f1_weighted: (test=0.533) precision_weighted: (test=0.666) recall_weighted: (test=0.461) total time= 8.4min
+[CV 1/5] END degree=2, kernel=poly; accuracy: (test=0.151) f1_weighted: (test=0.230) precision_weighted: (test=0.675) recall_weighted: (test=0.151) total time= 1.4min
+[CV 1/5] END degree=4, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.661) recall_weighted: (test=0.727) total time= 1.2min
+[CV 3/5] END degree=4, kernel=rbf; accuracy: (test=0.144) f1_weighted: (test=0.220) precision_weighted: (test=0.668) recall_weighted: (test=0.144) total time= 2.3min
+[CV 3/5] END alpha=0.5, norm=False; accuracy: (test=0.768) f1_weighted: (test=0.689) precision_weighted: (test=0.670) recall_weighted: (test=0.768) total time=   0.0s
+[CV 3/5] END alpha=1.5, norm=False; accuracy: (test=0.772) f1_weighted: (test=0.689) precision_weighted: (test=0.681) recall_weighted: (test=0.772) total time=   0.0s
+[CV 3/5] END degree=3, kernel=linear; accuracy: (test=0.420) f1_weighted: (test=0.503) precision_weighted: (test=0.657) recall_weighted: (test=0.420) total time= 7.6min
+[CV 5/5] END degree=3, kernel=rbf; accuracy: (test=0.421) f1_weighted: (test=0.502) precision_weighted: (test=0.665) recall_weighted: (test=0.421) total time=10.3min
+[CV 3/5] END degree=5, kernel=linear; accuracy: (test=0.420) f1_weighted: (test=0.503) precision_weighted: (test=0.657) recall_weighted: (test=0.420) total time= 6.9min
+[CV 5/5] END degree=5, kernel=rbf; accuracy: (test=0.421) f1_weighted: (test=0.502) precision_weighted: (test=0.665) recall_weighted: (test=0.421) total time= 8.7min
+[CV 5/5] END degree=2, kernel=rbf; accuracy: (test=0.147) f1_weighted: (test=0.223) precision_weighted: (test=0.667) recall_weighted: (test=0.147) total time= 2.4min
+[CV 2/5] END degree=4, kernel=poly; accuracy: (test=0.135) f1_weighted: (test=0.206) precision_weighted: (test=0.667) recall_weighted: (test=0.135) total time= 1.5min
+[CV 2/5] END alpha=0.5, norm=True; accuracy: (test=0.773) f1_weighted: (test=0.687) precision_weighted: (test=0.672) recall_weighted: (test=0.773) total time=   0.0s
+[CV 4/5] END alpha=1, norm=True; accuracy: (test=0.777) f1_weighted: (test=0.684) precision_weighted: (test=0.639) recall_weighted: (test=0.777) total time=   0.0s
+[CV 4/5] END degree=2, kernel=linear; accuracy: (test=0.374) f1_weighted: (test=0.462) precision_weighted: (test=0.660) recall_weighted: (test=0.374) total time= 7.6min
+[CV 4/5] END degree=3, kernel=rbf; accuracy: (test=0.431) f1_weighted: (test=0.511) precision_weighted: (test=0.665) recall_weighted: (test=0.431) total time=10.3min
+[CV 4/5] END degree=5, kernel=linear; accuracy: (test=0.374) f1_weighted: (test=0.462) precision_weighted: (test=0.660) recall_weighted: (test=0.374) total time= 6.9min
+[CV 4/5] END degree=5, kernel=rbf; accuracy: (test=0.431) f1_weighted: (test=0.511) precision_weighted: (test=0.665) recall_weighted: (test=0.431) total time= 8.8min
+[CV 2/5] END degree=2, kernel=rbf; accuracy: (test=0.142) f1_weighted: (test=0.217) precision_weighted: (test=0.667) recall_weighted: (test=0.142) total time= 2.4min
+[CV 1/5] END degree=4, kernel=poly; accuracy: (test=0.151) f1_weighted: (test=0.230) precision_weighted: (test=0.677) recall_weighted: (test=0.151) total time= 1.5min
+[CV 3/5] END degree=5, kernel=rbf; accuracy: (test=0.144) f1_weighted: (test=0.220) precision_weighted: (test=0.668) recall_weighted: (test=0.144) total time= 2.1min
+[CV 4/5] END alpha=1, norm=False; accuracy: (test=0.769) f1_weighted: (test=0.686) precision_weighted: (test=0.667) recall_weighted: (test=0.769) total time=   0.0s
+[CV 4/5] END degree=2, kernel=poly; accuracy: (test=0.421) f1_weighted: (test=0.504) precision_weighted: (test=0.664) recall_weighted: (test=0.421) total time=10.1min
+[CV 1/5] END degree=4, kernel=poly; accuracy: (test=0.508) f1_weighted: (test=0.572) precision_weighted: (test=0.665) recall_weighted: (test=0.508) total time=14.6min
+[CV 3/5] END degree=5, kernel=rbf; accuracy: (test=0.438) f1_weighted: (test=0.516) precision_weighted: (test=0.668) recall_weighted: (test=0.438) total time= 8.9min
+[CV 4/5] END degree=2, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.683) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 3/5] END degree=3, kernel=rbf; accuracy: (test=0.144) f1_weighted: (test=0.220) precision_weighted: (test=0.668) recall_weighted: (test=0.144) total time= 2.5min
+[CV 4/5] END degree=5, kernel=poly; accuracy: (test=0.731) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.731) total time= 1.4min
+[CV 5/5] END alpha=1, norm=True; accuracy: (test=0.777) f1_weighted: (test=0.685) precision_weighted: (test=0.656) recall_weighted: (test=0.777) total time=   0.0s
+[CV 5/5] END degree=2, kernel=linear; accuracy: (test=0.381) f1_weighted: (test=0.467) precision_weighted: (test=0.665) recall_weighted: (test=0.381) total time= 7.6min
+[CV 5/5] END degree=3, kernel=poly; accuracy: (test=0.438) f1_weighted: (test=0.518) precision_weighted: (test=0.661) recall_weighted: (test=0.438) total time=12.0min
+[CV 1/5] END degree=5, kernel=poly; accuracy: (test=0.615) f1_weighted: (test=0.637) precision_weighted: (test=0.663) recall_weighted: (test=0.615) total time=15.2min
+[CV 2/5] END degree=3, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.660) recall_weighted: (test=0.727) total time= 1.2min
+[CV 5/5] END degree=3, kernel=poly; accuracy: (test=0.142) f1_weighted: (test=0.216) precision_weighted: (test=0.669) recall_weighted: (test=0.142) total time= 1.4min
+[CV 5/5] END degree=4, kernel=rbf; accuracy: (test=0.147) f1_weighted: (test=0.223) precision_weighted: (test=0.667) recall_weighted: (test=0.147) total time= 2.3min
+[CV 2/5] END alpha=0.5, norm=False; accuracy: (test=0.766) f1_weighted: (test=0.687) precision_weighted: (test=0.667) recall_weighted: (test=0.766) total time=   0.0s
+[CV 2/5] END alpha=1.5, norm=False; accuracy: (test=0.768) f1_weighted: (test=0.687) precision_weighted: (test=0.671) recall_weighted: (test=0.768) total time=   0.0s
+[CV 2/5] END degree=3, kernel=linear; accuracy: (test=0.385) f1_weighted: (test=0.475) precision_weighted: (test=0.663) recall_weighted: (test=0.385) total time= 7.5min
+[CV 1/5] END degree=3, kernel=poly; accuracy: (test=0.481) f1_weighted: (test=0.552) precision_weighted: (test=0.668) recall_weighted: (test=0.481) total time=13.4min
+[CV 4/5] END degree=5, kernel=poly; accuracy: (test=0.572) f1_weighted: (test=0.612) precision_weighted: (test=0.664) recall_weighted: (test=0.572) total time=15.1min
+[CV 1/5] END degree=3, kernel=linear; accuracy: (test=0.727) f1_weighted: (test=0.682) precision_weighted: (test=0.661) recall_weighted: (test=0.727) total time= 1.2min
+[CV 2/5] END degree=3, kernel=rbf; accuracy: (test=0.142) f1_weighted: (test=0.217) precision_weighted: (test=0.667) recall_weighted: (test=0.142) total time= 2.4min
+[CV 1/5] END degree=5, kernel=poly; accuracy: (test=0.148) f1_weighted: (test=0.226) precision_weighted: (test=0.678) recall_weighted: (test=0.148) total time= 1.3min
+[CV 1/5] END alpha=1, norm=True; accuracy: (test=0.777) f1_weighted: (test=0.684) precision_weighted: (test=0.658) recall_weighted: (test=0.777) total time=   0.0s
+[CV 1/5] END degree=2, kernel=linear; accuracy: (test=0.399) f1_weighted: (test=0.485) precision_weighted: (test=0.664) recall_weighted: (test=0.399) total time= 7.5min
+[CV 3/5] END degree=3, kernel=poly; accuracy: (test=0.458) f1_weighted: (test=0.535) precision_weighted: (test=0.666) recall_weighted: (test=0.458) total time=13.0min
+[CV 2/5] END degree=5, kernel=poly; accuracy: (test=0.581) f1_weighted: (test=0.616) precision_weighted: (test=0.661) recall_weighted: (test=0.581) total time=16.0min
+[CV 3/5] END degree=3, kernel=linear; accuracy: (test=0.716) f1_weighted: (test=0.679) precision_weighted: (test=0.660) recall_weighted: (test=0.716) total time= 1.2min
+[CV 5/5] END degree=3, kernel=rbf; accuracy: (test=0.147) f1_weighted: (test=0.223) precision_weighted: (test=0.667) recall_weighted: (test=0.147) total time= 2.4min
+[CV 2/5] END degree=5, kernel=poly; accuracy: (test=0.133) f1_weighted: (test=0.204) precision_weighted: (test=0.667) recall_weighted: (test=0.133) total time= 1.4min
+[CV 2/5] END alpha=1, norm=True; accuracy: (test=0.775) f1_weighted: (test=0.683) precision_weighted: (test=0.644) recall_weighted: (test=0.775) total time=   0.0s
+[CV 2/5] END degree=2, kernel=linear; accuracy: (test=0.385) f1_weighted: (test=0.475) precision_weighted: (test=0.663) recall_weighted: (test=0.385) total time= 7.5min
+[CV 2/5] END degree=3, kernel=poly; accuracy: (test=0.447) f1_weighted: (test=0.526) precision_weighted: (test=0.667) recall_weighted: (test=0.447) total time=13.3min
+[CV 3/5] END degree=5, kernel=poly; accuracy: (test=0.582) f1_weighted: (test=0.618) precision_weighted: (test=0.665) recall_weighted: (test=0.582) total time=17.3min
+[CV 5/5] END degree=2, kernel=linear; accuracy: (test=0.725) f1_weighted: (test=0.683) precision_weighted: (test=0.661) recall_weighted: (test=0.725) total time= 1.2min
+[CV 1/5] END degree=3, kernel=poly; accuracy: (test=0.151) f1_weighted: (test=0.230) precision_weighted: (test=0.677) recall_weighted: (test=0.151) total time= 1.4min
+[CV 4/5] END degree=4, kernel=rbf; accuracy: (test=0.732) f1_weighted: (test=0.684) precision_weighted: (test=0.660) recall_weighted: (test=0.732) total time= 2.3min
+[CV 5/5] END alpha=0.5, norm=False; accuracy: (test=0.767) f1_weighted: (test=0.689) precision_weighted: (test=0.668) recall_weighted: (test=0.767) total time=   0.0s
+[CV 5/5] END alpha=1.5, norm=False; accuracy: (test=0.771) f1_weighted: (test=0.689) precision_weighted: (test=0.675) recall_weighted: (test=0.771) total time=   0.0s
+[CV 5/5] END degree=3, kernel=linear; accuracy: (test=0.381) f1_weighted: (test=0.467) precision_weighted: (test=0.665) recall_weighted: (test=0.381) total time= 7.6min
+[CV 4/5] END degree=3, kernel=poly; accuracy: (test=0.449) f1_weighted: (test=0.528) precision_weighted: (test=0.666) recall_weighted: (test=0.449) total time=13.4min
+[CV 5/5] END degree=5, kernel=poly; accuracy: (test=0.568) f1_weighted: (test=0.610) precision_weighted: (test=0.663) recall_weighted: (test=0.568) total time=17.3min
+Fitting 5 folds for each of 6 candidates, totalling 30 fits
+Fitting 5 folds for each of 12 candidates, totalling 60 fits
+Fitting 5 folds for each of 6 candidates, totalling 30 fits
+[CV 3/5] END alpha=1, norm=False; accuracy: (test=0.718) f1_weighted: (test=0.680) precision_weighted: (test=0.661) recall_weighted: (test=0.718) total time=   0.0s
+[CV 4/5] END alpha=1, norm=False; accuracy: (test=0.725) f1_weighted: (test=0.683) precision_weighted: (test=0.663) recall_weighted: (test=0.725) total time=   0.0s
+[CV 3/5] END alpha=0.5, norm=False; accuracy: (test=0.682) f1_weighted: (test=0.670) precision_weighted: (test=0.661) recall_weighted: (test=0.682) total time=   0.0s
+[CV 2/5] END alpha=0.5, norm=True; accuracy: (test=0.779) f1_weighted: (test=0.685) precision_weighted: (test=0.688) recall_weighted: (test=0.779) total time=   0.0s
+[CV 1/5] END alpha=1, norm=False; accuracy: (test=0.722) f1_weighted: (test=0.682) precision_weighted: (test=0.662) recall_weighted: (test=0.722) total time=   0.0s
+[CV 2/5] END alpha=0.5, norm=False; accuracy: (test=0.685) f1_weighted: (test=0.671) precision_weighted: (test=0.661) recall_weighted: (test=0.685) total time=   0.0s
+[CV 5/5] END alpha=1, norm=False; accuracy: (test=0.721) f1_weighted: (test=0.680) precision_weighted: (test=0.660) recall_weighted: (test=0.721) total time=   0.0s
+[CV 5/5] END alpha=0.5, norm=True; accuracy: (test=0.779) f1_weighted: (test=0.685) precision_weighted: (test=0.694) recall_weighted: (test=0.779) total time=   0.0s
+[CV 5/5] END alpha=0.5, norm=False; accuracy: (test=0.691) f1_weighted: (test=0.674) precision_weighted: (test=0.662) recall_weighted: (test=0.691) total time=   0.0s
+[CV 1/5] END alpha=0.5, norm=False; accuracy: (test=0.681) f1_weighted: (test=0.669) precision_weighted: (test=0.661) recall_weighted: (test=0.681) total time=   0.0s
+[CV 4/5] END alpha=1, norm=True; accuracy: (test=0.779) f1_weighted: (test=0.686) precision_weighted: (test=0.701) recall_weighted: (test=0.779) total time=   0.0s
+[CV 1/5] END alpha=1.5, norm=True; accuracy: (test=0.779) f1_weighted: (test=0.685) precision_weighted: (test=0.681) recall_weighted: (test=0.779) total time=   0.0s
+[CV 3/5] END alpha=0.5, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.686) precision_weighted: (test=0.729) recall_weighted: (test=0.780) total time=   0.0s
+[CV 2/5] END alpha=1.5, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.685) precision_weighted: (test=0.712) recall_weighted: (test=0.780) total time=   0.0s
+[CV 2/5] END alpha=1, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.685) precision_weighted: (test=0.708) recall_weighted: (test=0.780) total time=   0.0s
+[CV 3/5] END alpha=1.5, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.685) precision_weighted: (test=0.736) recall_weighted: (test=0.780) total time=   0.0s
+[CV 1/5] END alpha=1, norm=True; accuracy: (test=0.779) f1_weighted: (test=0.685) precision_weighted: (test=0.676) recall_weighted: (test=0.779) total time=   0.0s
+[CV 4/5] END alpha=1.5, norm=True; accuracy: (test=0.779) f1_weighted: (test=0.685) precision_weighted: (test=0.700) recall_weighted: (test=0.779) total time=   0.0s
+[CV 3/5] END alpha=1, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.686) precision_weighted: (test=0.744) recall_weighted: (test=0.780) total time=   0.0s
+[CV 5/5] END alpha=1.5, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.685) precision_weighted: (test=0.717) recall_weighted: (test=0.780) total time=   0.0s
+[CV 4/5] END alpha=0.5, norm=True; accuracy: (test=0.778) f1_weighted: (test=0.686) precision_weighted: (test=0.678) recall_weighted: (test=0.778) total time=   0.0s
+[CV 1/5] END alpha=1.5, norm=False; accuracy: (test=0.735) f1_weighted: (test=0.682) precision_weighted: (test=0.659) recall_weighted: (test=0.735) total time=   0.0s
+[CV 1/5] END alpha=0.5, norm=True; accuracy: (test=0.778) f1_weighted: (test=0.685) precision_weighted: (test=0.669) recall_weighted: (test=0.778) total time=   0.0s
+[CV 2/5] END alpha=1.5, norm=False; accuracy: (test=0.731) f1_weighted: (test=0.679) precision_weighted: (test=0.657) recall_weighted: (test=0.731) total time=   0.0s
+[CV 5/5] END alpha=1, norm=True; accuracy: (test=0.780) f1_weighted: (test=0.685) precision_weighted: (test=0.709) recall_weighted: (test=0.780) total time=   0.0s
+[CV 3/5] END alpha=1.5, norm=False; accuracy: (test=0.735) f1_weighted: (test=0.684) precision_weighted: (test=0.663) recall_weighted: (test=0.735) total time=   0.0s
+[CV 2/5] END alpha=1, norm=False; accuracy: (test=0.720) f1_weighted: (test=0.680) precision_weighted: (test=0.661) recall_weighted: (test=0.720) total time=   0.0s
+[CV 4/5] END alpha=1.5, norm=False; accuracy: (test=0.740) f1_weighted: (test=0.684) precision_weighted: (test=0.662) recall_weighted: (test=0.740) total time=   0.0s
+[CV 4/5] END alpha=0.5, norm=False; accuracy: (test=0.691) f1_weighted: (test=0.674) precision_weighted: (test=0.662) recall_weighted: (test=0.691) total time=   0.0s
+[CV 5/5] END alpha=1.5, norm=False; accuracy: (test=0.733) f1_weighted: (test=0.680) precision_weighted: (test=0.658) recall_weighted: (test=0.733) total time=   0.0s

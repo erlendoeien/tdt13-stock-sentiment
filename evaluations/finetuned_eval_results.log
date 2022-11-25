@@ -1,0 +1,297 @@
+2022-11-23 14:02:05,382 | INFO: Currently evaluating finbert on en body, chkpt: 11800
+2022-11-23 14:02:05,383 | INFO: Loading dataset finbert_en_body
+2022-11-23 14:02:10,605 | INFO: Loading autoconfig
+2022-11-23 14:02:11,107 | INFO: Overriden AutoConfig:
+BertConfig {
+  "_name_or_path": "ProsusAI/finbert",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+2022-11-23 14:02:11,107 | INFO: Loading best performed model
+2022-11-23 14:02:16,081 | INFO: Setup training args
+2022-11-23 14:02:17,965 | INFO: Predicting
+2022-11-23 14:02:40,818 | INFO: Prediction results:
+2022-11-23 14:02:40,819 | INFO: {'test_loss': 0.7395227551460266, 'test_accuracy': 0.751906539023203, 'test_precision': 0.6722199108427509, 'test_recall': 0.751906539023203, 'test_f1': 0.6955393597614584, 'test_runtime': 22.8511, 'test_samples_per_second': 809.107, 'test_steps_per_second': 3.195}
+2022-11-23 14:02:40,823 | INFO: Fetching training history from latest chckpt: finbert_body_finbert_en_body_50_128/checkpoint-25300
+2022-11-23 14:02:40,850 | INFO: Saving outfile eval_finetune_finbert_body_finbert_en_body_50_128_checkpoint-11800.json
+2022-11-23 14:02:40,882 | INFO: Clearing GPU cache
+2022-11-23 14:02:40,897 | INFO: Currently evaluating finbert on en title, chkpt: 700
+2022-11-23 14:02:40,897 | INFO: Loading dataset finbert_en_title
+2022-11-23 14:02:46,360 | INFO: Loading autoconfig
+2022-11-23 14:02:46,864 | INFO: Overriden AutoConfig:
+BertConfig {
+  "_name_or_path": "ProsusAI/finbert",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+2022-11-23 14:02:46,864 | INFO: Loading best performed model
+2022-11-23 14:02:52,382 | INFO: Setup training args
+2022-11-23 14:02:52,467 | INFO: Predicting
+2022-11-23 14:02:55,541 | INFO: Prediction results:
+2022-11-23 14:02:55,541 | INFO: {'test_loss': 0.6505383849143982, 'test_accuracy': 0.7449294174914814, 'test_precision': 0.6773238952454951, 'test_recall': 0.7449294174914814, 'test_f1': 0.6987630901311742, 'test_runtime': 3.0721, 'test_samples_per_second': 6018.39, 'test_steps_per_second': 12.044}
+2022-11-23 14:02:55,545 | INFO: Fetching training history from latest chckpt: finbert_title_finbert_en_title_36_256/checkpoint-4550
+2022-11-23 14:02:55,547 | INFO: Saving outfile eval_finetune_finbert_title_finbert_en_title_36_256_checkpoint-700.json
+2022-11-23 14:02:55,574 | INFO: Clearing GPU cache
+2022-11-23 14:02:55,586 | INFO: Currently evaluating xlm-roberta-base on en body, chkpt: 50000
+2022-11-23 14:02:55,586 | INFO: Loading dataset xlm-roberta-base_en_body
+2022-11-23 14:03:00,891 | INFO: Loading autoconfig
+2022-11-23 14:03:01,396 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-23 14:03:01,396 | INFO: Loading best performed model
+2022-11-23 14:03:07,817 | INFO: Setup training args
+2022-11-23 14:03:07,982 | INFO: Predicting
+2022-11-23 14:03:31,022 | INFO: Prediction results:
+2022-11-23 14:03:31,023 | INFO: {'test_loss': 0.6036760807037354, 'test_accuracy': 0.7799772837903618, 'test_precision': 0.6172757947132328, 'test_recall': 0.7799772837903618, 'test_f1': 0.6842895271265509, 'test_runtime': 23.0373, 'test_samples_per_second': 802.568, 'test_steps_per_second': 6.294}
+2022-11-23 14:03:31,028 | INFO: Fetching training history from latest chckpt: xlm-roberta-base_body_msg_en_50_64/checkpoint-50000
+2022-11-23 14:03:31,031 | INFO: Saving outfile eval_finetune_xlm-roberta-base_body_msg_en_50_64_checkpoint-50000.json
+2022-11-23 14:03:31,060 | INFO: Clearing GPU cache
+2022-11-23 14:03:31,075 | INFO: Currently evaluating xlm-roberta-base on all body, chkpt: 1000
+2022-11-23 14:03:31,075 | INFO: Loading dataset xlm-roberta-base_all_body
+2022-11-23 14:03:36,447 | INFO: Loading autoconfig
+2022-11-23 14:03:37,087 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-23 14:03:37,087 | INFO: Loading best performed model
+2022-11-23 14:03:43,534 | INFO: Setup training args
+2022-11-23 14:03:43,879 | INFO: Predicting
+2022-11-23 14:04:23,310 | INFO: Prediction results:
+2022-11-23 14:04:23,312 | INFO: {'test_loss': 0.6181627511978149, 'test_accuracy': 0.7704841568456731, 'test_precision': 0.5936458359501877, 'test_recall': 0.7704841568456731, 'test_f1': 0.6706028220075553, 'test_runtime': 39.4285, 'test_samples_per_second': 815.628, 'test_steps_per_second': 6.391}
+2022-11-23 14:04:23,318 | INFO: Fetching training history from latest chckpt: xlm-roberta-base_body_msg_all_50_64/checkpoint-68000
+2022-11-23 14:04:23,322 | INFO: Saving outfile eval_finetune_xlm-roberta-base_body_msg_all_50_64_checkpoint-1000.json
+2022-11-23 14:04:23,371 | INFO: Clearing GPU cache
+2022-11-23 14:04:23,385 | INFO: Currently evaluating xlm-roberta-base on all title, chkpt: 19000
+2022-11-23 14:04:23,385 | INFO: Loading dataset xlm-roberta-base_all_title
+2022-11-23 14:04:29,740 | INFO: Loading autoconfig
+2022-11-23 14:04:30,358 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-23 14:04:30,358 | INFO: Loading best performed model
+2022-11-23 14:04:37,330 | INFO: Setup training args
+2022-11-23 14:04:37,646 | INFO: Predicting
+2022-11-23 14:04:43,254 | INFO: Prediction results:
+2022-11-23 14:04:43,254 | INFO: {'test_loss': 0.9664584398269653, 'test_accuracy': 0.7379582698466992, 'test_precision': 0.6802791902740168, 'test_recall': 0.7379582698466992, 'test_f1': 0.6978791128675413, 'test_runtime': 5.6059, 'test_samples_per_second': 5736.682, 'test_steps_per_second': 11.238}
+2022-11-23 14:04:43,261 | INFO: Fetching training history from latest chckpt: xlm-roberta-base_title_msg_all_50/checkpoint-22000
+2022-11-23 14:04:43,266 | INFO: Saving outfile eval_finetune_xlm-roberta-base_title_msg_all_50_checkpoint-19000.json
+2022-11-23 14:04:43,314 | INFO: Clearing GPU cache
+2022-11-23 14:04:43,322 | INFO: Currently evaluating xlm-roberta-base on en title, chkpt: 1000
+2022-11-23 14:04:43,323 | INFO: Loading dataset xlm-roberta-base_en_title
+2022-11-23 14:04:48,403 | INFO: Loading autoconfig
+2022-11-23 14:04:48,907 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-23 14:04:48,907 | INFO: Loading best performed model
+2022-11-23 14:05:08,187 | INFO: Setup training args
+2022-11-23 14:05:08,493 | INFO: Predicting
+2022-11-23 14:05:11,739 | INFO: Prediction results:
+2022-11-23 14:05:11,739 | INFO: {'test_loss': 0.5778380036354065, 'test_accuracy': 0.7797068527232408, 'test_precision': 0.6079427761835816, 'test_recall': 0.7797068527232408, 'test_f1': 0.6831942859053785, 'test_runtime': 3.2439, 'test_samples_per_second': 5699.551, 'test_steps_per_second': 11.406}
+2022-11-23 14:05:11,743 | INFO: Fetching training history from latest chckpt: xlm-roberta-base_title_msg_en_50_256/checkpoint-12000
+2022-11-23 14:05:11,746 | INFO: Saving outfile eval_finetune_xlm-roberta-base_title_msg_en_50_256_checkpoint-1000.json
+2022-11-23 14:05:11,773 | INFO: Clearing GPU cache
+2022-11-23 14:05:11,784 | INFO: Complete

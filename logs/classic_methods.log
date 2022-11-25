@@ -1,0 +1,44 @@
+2022-11-25 10:59:16,567 | INFO: Loading train, val and test datasets
+2022-11-25 10:59:17,969 | INFO: Loading sentiment dictionary
+2022-11-25 10:59:18,143 | INFO: Note: NumExpr detected 56 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-11-25 10:59:18,143 | INFO: NumExpr defaulting to 8 threads.
+2022-11-25 10:59:18,150 | INFO: Setup data for title
+2022-11-25 10:59:18,150 | INFO: Loading both train and validation set for training set
+2022-11-25 10:59:18,196 | INFO: Tfidf vectorizing
+2022-11-25 10:59:18,727 | INFO: Running Grid search for SVM - title
+2022-11-25 10:59:18,727 | INFO: SVC(class_weight='balanced', random_state=37)
+2022-11-25 11:24:36,864 | INFO: Best parameter (CV score=0.689):
+2022-11-25 11:24:36,865 | INFO: {'C': 0.001, 'degree': 2, 'kernel': 'poly'}
+2022-11-25 11:24:36,865 | INFO: Predicting with best params
+2022-11-25 11:24:47,196 | INFO: Classifaction_report:
+2022-11-25 11:24:47,491 | INFO:               precision    recall  f1-score   support
+
+    negative       0.78      0.95      0.86     14416
+     neutral       0.17      0.12      0.14       251
+    positive       0.28      0.06      0.10      3822
+
+    accuracy                           0.76     18489
+   macro avg       0.41      0.38      0.37     18489
+weighted avg       0.67      0.76      0.69     18489
+
+2022-11-25 11:24:47,491 | INFO: ####################
+2022-11-25 11:24:47,491 | INFO: Setup data for body
+2022-11-25 11:24:47,491 | INFO: Loading both train and validation set for training set
+2022-11-25 11:24:47,583 | INFO: Tfidf vectorizing
+2022-11-25 11:25:00,428 | INFO: Running Grid search for SVM - body
+2022-11-25 11:25:00,428 | INFO: SVC(class_weight='balanced', random_state=37)
+2022-11-25 14:09:47,129 | INFO: Best parameter (CV score=0.619):
+2022-11-25 14:09:47,139 | INFO: {'C': 1, 'degree': 5, 'kernel': 'poly'}
+2022-11-25 14:09:47,139 | INFO: Predicting with best params
+2022-11-25 14:10:35,533 | INFO: Classifaction_report:
+2022-11-25 14:10:35,836 | INFO:               precision    recall  f1-score   support
+
+    negative       0.79      0.68      0.73     14416
+     neutral       0.03      0.37      0.06       251
+    positive       0.24      0.21      0.22      3822
+
+    accuracy                           0.58     18489
+   macro avg       0.35      0.42      0.34     18489
+weighted avg       0.67      0.58      0.62     18489
+
+2022-11-25 14:10:35,836 | INFO: ####################

@@ -13,60 +13,48 @@ import torch
 MODEL_CHECKPOINTS = ["xlm-roberta-base", "ProsusAI/finbert"]
 RAW_DATASETS = ["msg_all", "msg_en"]
 # DATASET PATHS ARE RELATIVE TO root project dir
-CONFIGS = {"model_checkpoints": {
+CONFIGS = {
     "xlm-roberta-base": {"body": 
                                   {"msg_all": {
-                                        "ds_path": None,
+                                        "ds_path": "xlm-roberta-base_all_body",
                                         "results": None,
                                         "logits": None,
                                        }, 
                                    "msg_en": {
-                                        "ds_path": None,
+                                        "ds_path": "xlm-roberta-base_en_body",
                                         "results": None,
                                         "logits": None,
                                        }, 
                                   },
                               "title": 
                                   {"msg_all": {
-                                        "ds_path": None,
+                                        "ds_path": "xlm-roberta-base_all_title",
                                         "results": None,
                                         "logits": None,
                                        }, 
                                    "msg_en": {
-                                        "ds_path": None,
+                                        "ds_path": "xlm-roberta-base_en_title",
                                         "results": None,
                                         "logits": None,
                                        }, 
                                   }
-                             } 
-                        },
-    "ProsusAI/finbert": {"body": 
-                                  {"msg_all": {
-                                        "ds_path": None,
-                                        "results": None,
-                                        "logits": None,
-                                       }, 
+                             }, 
+    "ProsusAI/finbert": {"body": {
                                    "msg_en": {
-                                        "ds_path": None,
+                                        "ds_path": "finbert_en_body",
                                         "results": None,
                                         "logits": None,
-                                       }, 
+                                       }
                                   },
-                         "title": 
-                                  {"msg_all": {
-                                        "ds_path": None,
-                                        "results": None,
-                                        "logits": None,
-                                       }, 
+                         "title": {
                                    "msg_en": {
-                                        "ds_path": None,
+                                        "ds_path": "finbert_en_title",
                                         "results": None,
                                         "logits": None,
-                                       }, 
+                                       },
                                   }
-                        },
+                        }
           }
-
 def prepare_ds(ds_path, txt_field, out_path):
     logging.info("\t>> Loading new dataset")
     raw_ds = _load_ds(ds_path)
@@ -122,16 +110,20 @@ def setup_training_args(output_dir, batch_size, **kwargs):
     return TrainingArguments(output_dir=output_dir, 
                               per_device_train_batch_size=batch_size,
                               per_device_eval_batch_size=batch_size,
-                              #num_train_epochs=NUM_TRAIN_EPOCHS,
                               **default_kwargs,
                              **kwargs
                                  )
 PRETRAINED_OUT_FILE = "pretrained_eval_results.json"
-FINETUNED_OUT_FILE = "finetuned_eval_results.json"
+
+def get_base_model(model_variation):
+        if "finbert" in model_variation.lower():
+            return "ProsusAI/finbert"
+        return "xlm-roberta-base"
+
 
 def checkpoint_save_predictions(result, out_file=PRETRAINED_OUT_FILE):
-    logging.info(f"Saving outfile {PRETRAINED_OUT_FILE}")
-    with open(PRETRAINED_OUT_FILE, "w") as out_file:
+    logging.info(f"Saving outfile {out_file}")
+    with open(out_file, "w") as out_file:
         json.dump(json.dumps(result), out_file, indent=4)
 
 if __name__ == "__main__":
@@ -139,17 +131,21 @@ if __name__ == "__main__":
     #    json.dump(json.dumps(CONFIGS), json_file, indent=4) 
     setup_logging("pretrained_eval_results.log", level=logging.INFO)
     chckpt2batch_size = {"xlm-roberta-base": {"title": 256, "body": 64},
-                     "ProsusAi/finbert": {"title": 256, "body": 128}
+                     "ProsusAI/finbert": {"title": 256, "body": 128}
                     }
     data_path = Path("data")
     raw_sets_path = data_path / "sets_new"
     results = None
     with open("empty_results.json", "r") as json_file:
-        results = json.loads(json.load(json_file))["model_checkpoints"]
+        results = json.loads(json.load(json_file))
     print(results)
-
-    #for mdl_chckpt in MODEL_CHECKPOINTS:
-        # IF NOT EXISTING DATASET -> Create DATASSET
+    if (existing_results_path:=Path(PRETRAINED_OUT_FILE)).exists():
+        logging.info("Loading existing results")
+        with open(existing_results_path, "r") as json_file:
+                existing_results = json.loads(json.load(json_file))
+                # Overriding only xlm_roberta
+        results = {**results, **existing_results}
+                
         
     for model_checkpoint, fields in results.items():
         logging.info(f"Eval of {model_checkpoint}")
@@ -162,16 +158,23 @@ if __name__ == "__main__":
             for ds_name, ds_results in raw_ds.items():
                 logging.info("Current model variation:")
                 logging.info(f"{model_checkpoint} - {field} - {ds_name}")
-                if not ds_results["ds_path"]:
+                if ds_results["logits"]:
+                    logging.info("Already predicted -> Skipping model")
+                    continue
+                    
+                model_base = get_base_model(model_checkpoint)
+                if "finbert" in model_checkpoint and ds_name == "msg_all":
+                    logging.info(f"Skipping due to irrelevant dataset for model - {ds_name}")
+                dataset_path = Path(f"{model_base}_{ds_name.split('_')[-1]}_{field}")
+                if not dataset_path.exists():
                     out_path = data_path / f"{model_name}_{ds_name.split('_')[-1]}_{field}"
                     logging.info(f"Preparing dataset from {ds_name}")
                     dataset = prepare_ds(raw_sets_path / ds_name, field, out_path)
                     results[model_checkpoint][field][ds_name]["ds_path"] = str(out_path)
                     checkpoint_save_predictions(results)
-                    
                 else:
                     logging.info(f"Loading existing dataset: {ds_name}")
-                    dataset = load_from_disk(data_path / ds_results["ds_path"])
+                    dataset = load_from_disk(dataset_path)
 
                 logging.info("Creating DataPaddingCollator")
                 # Use Data collator for on the fly padding of samples

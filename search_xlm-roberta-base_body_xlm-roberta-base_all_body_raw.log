@@ -1,0 +1,46 @@
+2022-11-23 11:53:43,264 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['train', 'val', 'test'], 'raw_dataset': None, 'dataset': 'xlm-roberta-base_all_body', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 32, 'batch_size': 64, 'resume_from_checkpoint': False}
+2022-11-23 11:53:43,264 | INFO: Loading tokenizer
+2022-11-23 11:53:48,466 | INFO: Loading existing dataset data/xlm-roberta-base_all_body
+2022-11-23 11:53:48,502 | INFO: Creating DataPaddingCollator
+2022-11-23 11:53:48,502 | INFO: Loading autoconfig
+2022-11-23 11:53:49,007 | INFO: Overriden AutoConfig:
+XLMRobertaConfig {
+  "_name_or_path": "xlm-roberta-base",
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+2022-11-23 11:53:49,007 | INFO: Loading model

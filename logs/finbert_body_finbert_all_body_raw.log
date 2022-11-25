@@ -1,0 +1,55 @@
+2022-11-22 10:34:02,047 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['train', 'val', 'test'], 'raw_dataset': None, 'dataset': 'finbert_all_body', 'model_checkpoint': 'ProsusAI/finbert', 'num_epochs': 50, 'batch_size': 128, 'resume_from_checkpoint': False}
+2022-11-22 10:34:02,047 | INFO: Loading tokenizer
+2022-11-22 10:34:06,954 | INFO: Loading existing dataset data/finbert_all_body
+2022-11-22 10:34:06,963 | INFO: Creating DataPaddingCollator
+2022-11-22 10:34:06,963 | INFO: Loading autoconfig
+2022-11-22 10:34:07,447 | INFO: Overriden AutoConfig:
+BertConfig {
+  "_name_or_path": "ProsusAI/finbert",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+2022-11-22 10:34:07,448 | INFO: Loading model
+2022-11-22 10:34:13,005 | INFO: Setup Trainer
+2022-11-22 10:34:17,566 | WARNING: Cloning https://huggingface.co/erlendoeien/finbert_body_finbert_all_body_50_128 into local empty directory.
+2022-11-22 10:34:22,217 | INFO: Initial results:
+2022-11-22 10:35:21,444 | INFO: PredictionOutput(predictions=array([[-1.187  , -0.605  ,  2.477  ],
+       [ 1.894  , -1.558  , -1.705  ],
+       [-1.111  , -0.9795 ,  2.63   ],
+       ...,
+       [-0.5757 , -1.229  ,  2.271  ],
+       [-0.06616, -0.884  ,  0.6123 ],
+       [-0.6294 , -1.657  ,  2.488  ]], dtype=float16), label_ids=array([2, 2, 2, ..., 0, 2, 2]), metrics={'test_loss': 0.8893909454345703, 'test_accuracy': 0.7195186417488106, 'test_precision': 0.6376730054721537, 'test_recall': 0.7195186417488106, 'test_f1': 0.6652837638588119, 'test_runtime': 59.2247, 'test_samples_per_second': 542.999, 'test_steps_per_second': 4.255})
+2022-11-22 10:35:21,445 | INFO: STARTING TRAINING from scratch

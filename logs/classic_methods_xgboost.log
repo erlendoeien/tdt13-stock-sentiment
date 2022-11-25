@@ -1,0 +1,64 @@
+2022-11-24 13:08:07,164 | INFO: Loading train, val and test datasets
+2022-11-24 13:08:08,085 | INFO: Loading sentiment dictionary
+2022-11-24 13:08:08,194 | INFO: Note: NumExpr detected 56 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-11-24 13:08:08,194 | INFO: NumExpr defaulting to 8 threads.
+2022-11-24 13:08:08,199 | INFO: Setup data for title
+2022-11-24 13:08:08,199 | INFO: Loading both train and validation set for training set
+2022-11-24 13:08:08,245 | INFO: Tfidf vectorizing
+2022-11-24 13:08:08,776 | INFO: Running Grid search for XGB - title
+2022-11-24 13:08:08,776 | INFO: XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=37, ...)
+2022-11-24 13:26:46,659 | INFO: Best parameter (CV score=0.685):
+2022-11-24 13:26:46,661 | INFO: {'colsample_bytree': 0.9, 'gamma': 1, 'learning_rate': 1, 'reg_alpha': 0.1, 'reg_lambda': 0.1, 'subsample': 0.7}
+2022-11-24 13:26:46,661 | INFO: Predicting with best params
+2022-11-24 13:26:46,671 | INFO: Classifaction_report:
+2022-11-24 13:26:46,967 | INFO:               precision    recall  f1-score   support
+
+    negative       0.78      1.00      0.88     14416
+     neutral       0.58      0.06      0.10       251
+    positive       0.26      0.00      0.01      3822
+
+    accuracy                           0.78     18489
+   macro avg       0.54      0.35      0.33     18489
+weighted avg       0.67      0.78      0.69     18489
+
+2022-11-24 13:26:46,967 | INFO: ####################
+2022-11-24 13:26:46,967 | INFO: Setup data for body
+2022-11-24 13:26:46,967 | INFO: Loading both train and validation set for training set
+2022-11-24 13:26:47,159 | INFO: Tfidf vectorizing
+2022-11-24 13:27:00,036 | INFO: Running Grid search for XGB - body
+2022-11-24 13:27:00,036 | INFO: XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=37, ...)
+2022-11-24 15:07:27,711 | INFO: Best parameter (CV score=0.694):
+2022-11-24 15:07:27,723 | INFO: {'colsample_bytree': 0.5, 'gamma': 0.1, 'learning_rate': 1, 'reg_alpha': 1, 'reg_lambda': 0.5, 'subsample': 0.5}
+2022-11-24 15:07:27,723 | INFO: Predicting with best params
+2022-11-24 15:07:27,737 | INFO: Classifaction_report:
+2022-11-24 15:07:28,037 | INFO:               precision    recall  f1-score   support
+
+    negative       0.78      0.97      0.86     14416
+     neutral       0.63      0.12      0.21       251
+    positive       0.27      0.05      0.08      3822
+
+    accuracy                           0.76     18489
+   macro avg       0.56      0.38      0.38     18489
+weighted avg       0.68      0.76      0.69     18489
+
+2022-11-24 15:07:28,037 | INFO: ####################

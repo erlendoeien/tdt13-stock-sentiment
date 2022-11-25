@@ -1,0 +1,53 @@
+2022-11-24 12:54:36,845 | INFO: Loading train, val and test datasets
+2022-11-24 12:54:37,769 | INFO: Loading sentiment dictionary
+2022-11-24 12:54:37,879 | INFO: Note: NumExpr detected 56 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-11-24 12:54:37,879 | INFO: NumExpr defaulting to 8 threads.
+2022-11-24 12:54:37,884 | INFO: Setup data for title
+2022-11-24 12:54:37,884 | INFO: Loading both train and validation set for training set
+2022-11-24 12:54:37,937 | INFO: Tfidf vectorizing
+2022-11-24 12:54:38,473 | INFO: Running Grid search for SVM - title
+2022-11-24 12:54:38,473 | INFO: SVC(class_weight='balanced', random_state=37)
+2022-11-24 13:01:15,612 | INFO: Best parameter (CV score=0.682):
+2022-11-24 13:01:15,613 | INFO: {'degree': 2, 'kernel': 'linear'}
+2022-11-24 13:01:15,613 | INFO: Predicting with best params
+2022-11-24 13:01:24,046 | INFO: Classifaction_report:
+2022-11-24 13:01:24,339 | INFO:               precision    recall  f1-score   support
+
+    negative       0.78      0.90      0.84     14416
+     neutral       0.07      0.13      0.09       251
+    positive       0.25      0.09      0.14      3822
+
+    accuracy                           0.73     18489
+   macro avg       0.37      0.38      0.36     18489
+weighted avg       0.67      0.73      0.68     18489
+
+2022-11-24 13:01:24,339 | INFO: ####################
+2022-11-24 13:01:24,339 | INFO: Running Grid search for CNB - title
+2022-11-24 13:01:24,339 | INFO: ComplementNB()
+2022-11-24 13:01:24,441 | INFO: Best parameter (CV score=0.688):
+2022-11-24 13:01:24,442 | INFO: {'alpha': 0.5, 'norm': False}
+2022-11-24 13:01:24,442 | INFO: Predicting with best params
+2022-11-24 13:01:24,442 | INFO: Classifaction_report:
+2022-11-24 13:01:24,736 | INFO:               precision    recall  f1-score   support
+
+    negative       0.78      0.97      0.87     14416
+     neutral       0.19      0.09      0.12       251
+    positive       0.28      0.03      0.06      3822
+
+    accuracy                           0.77     18489
+   macro avg       0.42      0.36      0.35     18489
+weighted avg       0.67      0.77      0.69     18489
+
+2022-11-24 13:01:24,736 | INFO: ####################
+2022-11-24 13:01:24,737 | INFO: Running Grid search for XGB - title
+2022-11-24 13:01:24,737 | INFO: XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=37, ...)

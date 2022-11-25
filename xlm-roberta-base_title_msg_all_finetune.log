@@ -1,0 +1,8 @@
+2022-11-22 00:23:12,185 | INFO: Script args:
+{'txt_field': 'title', 'splits': None, 'dataset': 'msg_all', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 50, 'batch_size': 4, 'resume_from_checkpoint': False, 'lm_dataset': 'lm_msg_all_text_512_drop_last_xlm_roberta_base_512'}
+2022-11-22 00:23:12,185 | INFO: Loading tokenizer
+2022-11-22 00:23:17,141 | INFO: Loading existing LM dataset data/lm_msg_all_text_512_drop_last_xlm_roberta_base_512
+2022-11-22 00:23:23,997 | INFO: Setup Trainer
+2022-11-22 00:23:28,129 | WARNING: /cluster/home/erlenoi/tdt13_nlp/xlm-roberta-base-finetuned-xosl-512 is already a clone of https://huggingface.co/erlendoeien/xlm-roberta-base-finetuned-xosl-512. Make sure you pull the latest changes with `repo.git_pull()`.
+2022-11-22 00:23:33,146 | WARNING: /cluster/home/erlenoi/tdt13_nlp/xlm-roberta-base-finetuned-xosl-512 is already a clone of https://huggingface.co/erlendoeien/xlm-roberta-base-finetuned-xosl-512. Make sure you pull the latest changes with `repo.git_pull()`.
+2022-11-22 00:23:36,071 | INFO: Initial results:

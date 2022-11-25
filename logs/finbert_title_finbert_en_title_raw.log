@@ -1,0 +1,77 @@
+2022-11-22 14:59:20,321 | INFO: Script args:
+{'txt_field': 'title', 'splits': ['train', 'val', 'test'], 'raw_dataset': 'msg_en', 'dataset': 'finbert_en_title', 'model_checkpoint': 'ProsusAI/finbert', 'num_epochs': 36, 'batch_size': 256, 'resume_from_checkpoint': False}
+2022-11-22 14:59:20,321 | INFO: Loading tokenizer
+2022-11-22 14:59:25,339 | INFO: Loading new dataset
+2022-11-22 14:59:25,881 | WARNING: Using custom data configuration default-b5b3d374d17854c7
+2022-11-22 14:59:25,929 | WARNING: Found cached dataset parquet (/cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec)
+2022-11-22 14:59:25,960 | INFO: Tokenizing dataset on title
+2022-11-22 14:59:25,962 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-2de5e1b0cd9f7816.arrow
+2022-11-22 14:59:25,967 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-4e0459c35ea81a41.arrow
+2022-11-22 14:59:25,972 | WARNING: Loading cached processed dataset at /cluster/home/erlenoi/.cache/huggingface/datasets/parquet/default-b5b3d374d17854c7/0.0.0/2a3b91fbd88a2c90d1dbbb32b460cf621d31bd5b05b934492fdef7d8d6f236ec/cache-12ead5fb0644f22d.arrow
+2022-11-22 14:59:49,593 | INFO: Longest title in train (words): 40
+2022-11-22 14:59:49,593 | INFO: Removing columns and OHE labels
+2022-11-22 15:00:17,964 | INFO: Store dataset to data/finbert_en_title
+2022-11-22 15:00:17,994 | INFO: Creating DataPaddingCollator
+2022-11-22 15:00:17,994 | INFO: Loading autoconfig
+2022-11-22 15:00:18,483 | INFO: Overriden AutoConfig:
+BertConfig {
+  "_name_or_path": "ProsusAI/finbert",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "positive",
+    "1": "neutral",
+    "2": "negative"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "negative": 2,
+    "neutral": 1,
+    "positive": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.18.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+2022-11-22 15:00:18,483 | INFO: Loading model
+2022-11-22 15:00:25,286 | INFO: Setup Trainer
+2022-11-22 15:00:34,362 | WARNING: Cloning https://huggingface.co/erlendoeien/finbert_title_finbert_en_title_36_256 into local empty directory.
+2022-11-22 15:00:39,223 | INFO: Initial results:
+2022-11-22 15:00:46,977 | INFO: PredictionOutput(predictions=array([[-1.087 , -0.8184,  2.506 ],
+       [-0.612 , -1.675 ,  2.557 ],
+       [-1.265 , -0.61  ,  2.533 ],
+       ...,
+       [-1.335 , -0.3323,  2.477 ],
+       [-1.039 , -0.639 ,  2.518 ],
+       [-1.335 , -0.3323,  2.477 ]], dtype=float16), label_ids=array([2, 2, 2, ..., 2, 0, 2]), metrics={'test_loss': 0.9383612871170044, 'test_accuracy': 0.7040943263562118, 'test_precision': 0.65501880644231, 'test_recall': 0.7040943263562118, 'test_f1': 0.6743076923309272, 'test_runtime': 7.751, 'test_samples_per_second': 2385.367, 'test_steps_per_second': 4.774})
+2022-11-22 15:00:46,977 | INFO: STARTING TRAINING from scratch
+2022-11-22 15:29:14,281 | INFO: Eval results on best model
+2022-11-22 15:29:16,360 | INFO: {'eval_loss': 0.6497403979301453, 'eval_accuracy': 0.7492698756084369, 'eval_precision': 0.6849754960999711, 'eval_recall': 0.7492698756084369, 'eval_f1': 0.7037382717076675, 'eval_runtime': 2.0705, 'eval_samples_per_second': 4465.11, 'eval_steps_per_second': 9.177, 'epoch': 36.0}
+2022-11-22 15:29:16,360 | INFO: Predicting on test
+2022-11-22 15:29:20,764 | INFO: PredictionOutput(predictions=array([[ 1.487 , -5.145 ,  2.816 ],
+       [ 0.4338, -4.29  ,  3.31  ],
+       [ 1.395 , -3.113 ,  1.616 ],
+       ...,
+       [ 0.831 , -3.334 ,  2.416 ],
+       [ 0.2332, -1.531 ,  1.561 ],
+       [ 0.831 , -3.334 ,  2.416 ]], dtype=float16), label_ids=array([2, 2, 2, ..., 2, 0, 2]), metrics={'test_loss': 0.6505383849143982, 'test_accuracy': 0.7449294174914814, 'test_precision': 0.6773238952454951, 'test_recall': 0.7449294174914814, 'test_f1': 0.6987630901311742, 'test_runtime': 4.4019, 'test_samples_per_second': 4200.263, 'test_steps_per_second': 8.406})
+2022-11-22 15:29:20,765 | INFO: COMPLETE
+2022-11-22 15:29:20,765 | ERROR: Waiting for the following commands to finish before shutting down: [[push command, status code: running, in progress. PID: 3998464]].
+2022-11-22 15:29:30,775 | ERROR: Waiting for the following commands to finish before shutting down: [[push command, status code: running, in progress. PID: 3998464]].

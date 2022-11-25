@@ -1,0 +1,4 @@
+2022-11-22 20:18:23,863 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['train', 'val', 'test'], 'raw_dataset': None, 'dataset': 'msg_all', 'model_checkpoint': 'xlm-roberta-base', 'num_epochs': 50, 'batch_size': 64, 'resume_from_checkpoint': False}
+2022-11-22 20:18:23,863 | INFO: Loading tokenizer
+2022-11-22 20:18:28,917 | INFO: Loading new dataset

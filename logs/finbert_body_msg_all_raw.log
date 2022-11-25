@@ -1,0 +1,3 @@
+2022-11-22 09:25:03,786 | INFO: Script args:
+{'txt_field': 'body', 'splits': ['train', 'val', 'test'], 'raw_dataset': None, 'dataset': 'msg_all', 'model_checkpoint': 'ProsusAI/finbert', 'num_epochs': 50, 'batch_size': 256, 'resume_from_checkpoint': False}
+2022-11-22 09:25:03,787 | INFO: Loading new dataset
